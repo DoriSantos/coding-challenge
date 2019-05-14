@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+// import { NavLink, Route, Link } from 'react-router-dom'
+// import CelebDetail from './CelebDetail'
 
 
 class App extends React.Component {
@@ -22,9 +24,13 @@ class App extends React.Component {
             {this.state.celebrities.map(celebrity => <tr key={celebrity.id}>
               <td><img src={"https://image.tmdb.org/t/p/w185"+celebrity.profile_path} alt=""/></td>
               {celebrity.name}
+              {/* <td>Known for</td> */}
             </tr>)}
           </tbody> 
         </table>}
+        <div>
+          {/* <Route path="/:know_for" component={CelebDetail} /> */}
+        </div>
       </div>
     );
   }
